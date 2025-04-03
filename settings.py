@@ -1,13 +1,11 @@
 from pydantic import BaseModel
 from agents import Agent, WebSearchTool, ModelSettings, function_tool
-from typing import List, Optional, Literal
+from typing import Literal
 
-# Job Scraping information
-LOCATION = "Australia"
-N_JOBS_TO_ANALIZE=3
+
 #URL = f"https://www.linkedin.com/jobs/search?keywords=Python%20Developer&location=Australia"
 
-CHROMADB_PATH = "C:\\Users\\christian.loconsole\\OneDrive - LUTECH SPA\\Desktop\\interface_italgas\\mytools\\scripts\\experiment"
+CHROMADB_PATH = "YOUR CHROMADB PATH"
 MAX_TURNS = 10
 
 # Additional commands you can give, USER_PROMPTS[i] is sent to i-1(th) Agent
@@ -40,7 +38,6 @@ AGENT_2 = Agent(
 AGENT_3 = Agent(name="AI Reducer", instructions="Make it less AI-generated", model="gpt-4o-mini")
 
 class CVInput(BaseModel):
-    user_prompts: Optional[List[str]] = None
     url: str
 
 class ScrapeRequest(BaseModel):

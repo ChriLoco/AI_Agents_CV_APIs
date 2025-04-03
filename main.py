@@ -238,11 +238,7 @@ async def process_cv(input_data: CVInput):
         Search up for personal information to be used into CV writing
         """
 
-        
-        if input_data.user_prompts:
-            for i in range(len(input_data.user_prompts)):
-                USER_PROMPTS[i]+=input_data.user_prompts[i]
-        # You should give AGENT 2 company name as info
+    
         USER_PROMPTS[1] += f"- The company name to search on the internet is {job_data.company}"
 
         turn_count = 0

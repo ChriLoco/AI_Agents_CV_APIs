@@ -12,8 +12,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from agents import Runner
 from settings import *
 
-CHROMADB_PATH = "C:\\Users\\christian.loconsole\\OneDrive - LUTECH SPA\\Desktop\\interface_italgas\\mytools\\scripts\\experiment"
-MAX_TURNS = 10
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 client = chromadb.PersistentClient(path=CHROMADB_PATH)

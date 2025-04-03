@@ -30,7 +30,7 @@ HOW TO USE THIS FAST
 
 1) You install requirements (eventually into an env):
 
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
 
 2) You modify some variables into the "settings.py" file 
 
@@ -39,6 +39,13 @@ HOW TO USE THIS FAST
   USER_PROMPTS --> additional commands you can give, USER_PROMPTS[i] is sent to i-1(th) Agent
   
   AGENT_1, AGENT_2, AGENT_3, AGENT_4 --> they can be modified to experiment new purposes
+
+3) You set your openai key:
+   
+   `$env:OPENAI_API_KEY="{YOUR OPENAI API KEY}"`
+
+4) put this into browser:
+   `http://127.0.0.1:8080/docs`
 
 API DESCRIPTION   
 ------------------------

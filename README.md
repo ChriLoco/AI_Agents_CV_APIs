@@ -63,7 +63,7 @@ Input:
 Output:
   -Extracted job data in Job format:
     -title, place, company, date, description
-------------------------------------------------------------------------------
+
 
 2. Personal Data Management APIs
    
@@ -100,7 +100,7 @@ Output:
 
 /my_data/get_list/
 Output: Returns all stored documents with metadata
-------------------------------------------------------------------------------
+
 
 3. CV Processing API
    
@@ -115,6 +115,6 @@ Process:
 
 Output:
   -Returns the final optimized CV as text
-------------------------------------------------------------------------------
+
 
 

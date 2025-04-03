@@ -41,77 +41,69 @@ HOW TO USE THIS FAST
 API DESCRIPTION   
 ------------------------
 
-1. Job Data Collection APIs
-   
-/jobs/get_list
--Input: ScrapeRequest
-  - location: Job search location
-  - job: Job title/keywords
-  - max_jobs: Max number of job listings to scrape (default: 10)
+### **1. Job Data Collection APIs**
+#### **`/jobs/get_list`**  
+- **Input:** `ScrapeRequest`
+  - `location`: Job search location  
+  - `job`: Job title/keywords  
+  - `max_jobs`: Max number of job listings to scrape (default: 10)  
+- **Output:**  
+  - A JSON list of scraped job postings  
+  - An Excel file (`job_offers.xlsx`) with the scraped data  
 
-Output:
-  - A JSON list of scraped job postings
-  - An Excel file in your working dir (job_offers.xlsx) with the scraped data
+#### **`/jobs/upload_job`**  
+- **Input:**  
+  - A **LinkedIn job URL** (as a string)  
+- **Output:**  
+  - Extracted job data in **`Job`** format:  
+    - `title`, `place`, `company`, `date`, `description`  
 
-/jobs/upload_job
-Input:
-  -A LinkedIn job URL (as a string)
-  
-Output:
-  -Extracted job data in Job format:
-    -title, place, company, date, description
+---
 
+### **2. Personal Data Management APIs**
+#### **`/my_data/add/`**  
+- **Input:** `Document`
+  - Stores personal details like work/academic experience  
+- **Output:**  
+  - Confirmation message that the document was added  
 
-2. Personal Data Management APIs
-   
-/my_data/add/
-Input: Document
-  -Stores personal details like work/academic experience
+#### **`/my_data/update/`**  
+- **Input:** `UpdateDocument`
+  - `doc_id`: ID of the document to update  
+  - `new_doc_text`: Updated content  
+  - `new_metadata`: Updated metadata (including title, location, etc.)  
+- **Output:**  
+  - Confirmation message  
 
-Output:
-  -Confirmation message that the document was added
+#### **`/my_data/delete/`**  
+- **Input:** `DeleteRequest`
+  - `doc_id`: ID of the document to delete  
+- **Output:**  
+  - Confirmation message  
 
-/my_data/update/
-Input: UpdateDocument
-  -doc_id: ID of the document to update
-  -new_doc_text: Updated content
-  -new_metadata: Updated metadata (including title, location, etc.)
+#### **`/my_data/semantic_search/`**  
+- **Input:** `Query`
+  - `query_text`: The search query  
+  - `top_k`: Number of results to return (default: 5)  
+- **Output:**  
+  - A list of matching documents from the vector database  
 
-Output:
-  -Confirmation message
+#### **`/my_data/get_list/`**  
+- **Output:**  
+  - Returns **all** stored documents with metadata  
 
-/my_data/delete/
-Input: DeleteRequest
-  -doc_id: ID of the document to delete
+---
 
-Output:
-  - Confirmation message
+### **3. CV Processing API**
+#### **`/process_cv/`**  
+- **Input:** `CVInput`
+  - `url`: LinkedIn job post URL  
+- **Process:**  
+  1. Fetches job details (`Job`) using `/jobs/upload_job`  
+  2. Searches for personal info in the database using `PersonalInformationTool`  
+  3. Runs a **multi-step AI process** to generate a **personalized CV**  
+- **Output:**  
+  - Returns the **final optimized CV** as text  
 
-/my_data/semantic_search/
-Input: Query
-- query_text: The search query
-- top_k: Number of results to return (default: 5)
-
-Output:
-- A list of matching documents from the vector database
-
-/my_data/get_list/
-Output: Returns all stored documents with metadata
-
-
-3. CV Processing API
-   
-/process_cv/
-Input: CVInput
-- url: LinkedIn job post URL
-
-Process:
-  -Fetches job details (Job) using /jobs/upload_job
-  -Searches for personal info in the database using PersonalInformationTool
-  -Runs a multi-step AI process to generate a personalized CV
-
-Output:
-  -Returns the final optimized CV as text
-
-
+---
 

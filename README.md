@@ -5,9 +5,9 @@ It's a little Python FastAPI server you can run locally that allows you to:
 
 1) Scrape Linkedin's jobs you like (beautifulsoup + selenium)
 2) Add personal information to a local vectordb (chromadb)
-3) Run an agentic environment that adapats the cv template you like to the job description you like taking personal information you have put into vectordb
+3) Run an agentic environment that adapts the cv template you like to the job description you like taking personal information you have put into vectordb
 
-and once you configure settings' paths and (eventually) agents' prompts, you pass the url to the CV api and that's it.
+and once you configure settings' paths and (eventually) agents' prompts, you have to pass the url to the CV api and that's it.
 
 result is a latex file
 

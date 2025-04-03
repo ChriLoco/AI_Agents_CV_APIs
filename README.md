@@ -1,5 +1,5 @@
 WHAT IS THIS    
-----------------------
+-----------------------
 
 It's a little Python FastAPI server you can run locally that allows you to:
 
@@ -13,7 +13,7 @@ result is a latex file
 
 
 WHY THIS      
----------------------
+----------------------
 
 It's no secret people nowadays use LLMs to adapt CV to Job applications. Problem is, when the conversation with the LLM becomes longer than LLM ability to remember it (aka context window)
 it looks like it starts forgetting stuff, making you waste time. 

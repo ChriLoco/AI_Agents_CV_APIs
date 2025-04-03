@@ -35,7 +35,9 @@ HOW TO USE THIS FAST
 2) You modify some variables into the "settings.py" file 
 
   CHROMADB_PATH --> i suggest you the same working directory in which you forked everything
+  
   USER_PROMPTS --> additional commands you can give, USER_PROMPTS[i] is sent to i-1(th) Agent
+  
   AGENT_1, AGENT_2, AGENT_3, AGENT_4 --> they can be modified to experiment new purposes
 
 API DESCRIPTION   

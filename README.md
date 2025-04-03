@@ -1,4 +1,4 @@
-|    WHAT IS THIS    |
+WHAT IS THIS    
 ----------------------
 
 It's a little Python FastAPI server you can run locally that allows you to:
@@ -12,8 +12,8 @@ and once you configure settings' paths and (eventually) agents' prompts, you pas
 result is a latex file
 
 
-|      WHY THIS      |
-----------------------
+WHY THIS      
+---------------------
 
 It's no secret people nowadays use LLMs to adapt CV to Job applications. Problem is, when the conversation with the LLM becomes longer than LLM ability to remember it (aka context window)
 it looks like it starts forgetting stuff, making you waste time. 
@@ -25,7 +25,7 @@ This is achieved by saving once for all your past experiences, skills, academic 
 
 Fork it, leave a star pls ⭐. You can modify it, steal it, love it, hate, got it.
 
-| HOW TO USE THIS FAST |
+HOW TO USE THIS FAST 
 ------------------------
 
 1) You install requirements (eventually into an env):
@@ -38,7 +38,7 @@ Fork it, leave a star pls ⭐. You can modify it, steal it, love it, hate, got i
   USER_PROMPTS --> additional commands you can give, USER_PROMPTS[i] is sent to i-1(th) Agent
   AGENT_1, AGENT_2, AGENT_3, AGENT_4 --> they can be modified to experiment new purposes
 
-|    API DESCRIPTION   |
+API DESCRIPTION   
 ------------------------
 
 1. Job Data Collection APIs

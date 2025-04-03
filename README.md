@@ -49,6 +49,7 @@ HOW TO USE THIS FAST
    `uvicorn main:app --host 0.0.0.0 --port 8080 --reload`
 
 5) put this into browser:
+   
    `http://127.0.0.1:8080/docs`
 
 API DESCRIPTION   

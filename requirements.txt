@@ -1,0 +1,9 @@
+selenium==4.30.0
+bs4==0.0.2
+beautifulsoup4==4.13.3
+webdriver-manager==4.0.2
+chromadb==0.6.3
+pandas==2.2.3
+requests==2.32.3
+fastapi==0.115.8
+pydantic==2.10.6
